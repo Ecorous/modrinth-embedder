@@ -14,32 +14,71 @@
  limitations under the License.
 -->
 <script>
-    let left = "<";
-    let right = ">";
-</script>
-<h1>Examples</h1>
-<p>To use these examples, you must replace the slug/id from the url with the project you wish's slug/id. <br/> Despite the url saying <code>mod</code>, it should work (untested) with modpacks, plugins and resourcepacks as well</p>
-<div id="example1">
-    <h4 style="font-size: x-large;">Example - using a project's slug</h4>
-    <p><code>{left}iframe style="border: none; height: 200px;" seamless src="{window.location.protocol}//{window.location.host}/mod/rmscore"{right}{left}/iframe{right}</code></p>
-    <iframe style="border: none; height: 200px;" seamless src="http://m:5173/mod/rmscore"></iframe>
-    <p>To remove the scrollbars (this is unrecommended as it's deprecated) use this:</p>
-    <p><code>{left}iframe style="border: none; height: 200px;" scrolling="no" seamless src="{window.location.protocol}//{window.location.host}/mod/rmscore"{right}{left}/iframe{right}</code></p>
-    <iframe style="border: none; height: 200px;" scrolling="no" seamless src="http://m:5173/mod/rmscore"></iframe>
-</div>
-<br/>
-<br/>
-<br/>
-<div id="example2">
-    <h4 style="font-size: x-large;">Example - using a project's id</h4>
-    <p>Using a project's id works in just the same way - see below</p>
-    <p><code>{left}iframe style="border: none; height: 200px;" seamless src="{window.location.protocol}//{window.location.host}/mod/aRooc1Sw"{right}{left}/iframe{right}</code></p>
-    <iframe style="border: none; height: 200px;" seamless src="http://m:5173/mod/aRooc1Sw"></iframe>
-    <p>Again, to remove the scrollbars (again, deprecated) use this:</p>
-    <p><code>{left}iframe style="border: none; height: 200px;" scrolling="no" seamless src="{window.location.protocol}//{window.location.host}/mod/aRooc1Sw"{right}{left}/iframe{right}</code></p>
-    <iframe style="border: none; height: 200px;" scrolling="no" seamless src="http://m:5173/mod/aRooc1Sw"></iframe>
-</div>
+	import { browser } from '$app/environment';
 
+	let left = '<';
+	let right = '>';
+	let url = 'https://m.ecorous.org';
+
+    if (browser) {
+        url = window.location.protocol + "//" + window.location.host
+    }
+</script>
+
+<h1>Examples</h1>
+<p>
+	To use these examples, you must replace the slug/id from the url with the project you wish's
+	slug/id. <br /> Despite the url saying <code>mod</code>, it should work (untested) with modpacks,
+	plugins and resourcepacks as well
+</p>
+<div id="example1">
+	<h4 style="font-size: x-large;">Example - using a project's slug</h4>
+	<p>
+		<code
+			>{left}iframe style="border: none; height: 200px;" seamless src="{window.location
+				.protocol}//{url}/mod/rmscore"{right}{left}/iframe{right}</code
+		>
+	</p>
+	<iframe style="border: none; height: 200px;" seamless src="{url}/mod/rmscore" />
+	<p>To remove the scrollbars (this is unrecommended as it's deprecated) use this:</p>
+	<p>
+		<code
+			>{left}iframe style="border: none; height: 200px;" scrolling="no" seamless src="{url}/mod/rmscore"{right}{left}/iframe{right}</code
+		>
+	</p>
+	<iframe
+		style="border: none; height: 200px;"
+		scrolling="no"
+		seamless
+		src="{url}/mod/rmscore"
+	/>
+</div>
+<br />
+<br />
+<br />
+<div id="example2">
+	<h4 style="font-size: x-large;">Example - using a project's id</h4>
+	<p>Using a project's id works in just the same way - see below</p>
+	<p>
+		<code
+			>{left}iframe style="border: none; height: 200px;" seamless src="{window.location
+				.protocol}//{window.location.host}/mod/aRooc1Sw"{right}{left}/iframe{right}</code
+		>
+	</p>
+	<iframe style="border: none; height: 200px;" seamless src="http://m:5173/mod/aRooc1Sw" />
+	<p>Again, to remove the scrollbars (again, deprecated) use this:</p>
+	<p>
+		<code
+			>{left}iframe style="border: none; height: 200px;" scrolling="no" seamless src="{url}/mod/aRooc1Sw"{right}{left}/iframe{right}</code
+		>
+	</p>
+	<iframe
+		style="border: none; height: 200px;"
+		scrolling="no"
+		seamless
+		src="{url}/mod/aRooc1Sw"
+	/>
+</div>
 
 <style>
 	:root {
@@ -65,10 +104,10 @@
 		left: 50%;
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
-        background-color: rgb(22, 50, 162);
-        border: none;
-        padding: 20px;
-        font-size: larger;
-        border-radius: 15px;
+		background-color: rgb(22, 50, 162);
+		border: none;
+		padding: 20px;
+		font-size: larger;
+		border-radius: 15px;
 	}
 </style>
