@@ -35,8 +35,7 @@
 	<h4 style="font-size: x-large;">Example - using a project's slug</h4>
 	<p>
 		<code
-			>{left}iframe style="border: none; height: 200px;" seamless src="{window.location
-				.protocol}//{url}/mod/rmscore"{right}{left}/iframe{right}</code
+			>{left}iframe style="border: none; height: 200px;" seamless src="{url}/mod/rmscore"{right}{left}/iframe{right}</code
 		>
 	</p>
 	<iframe style="border: none; height: 200px;" seamless src="{url}/mod/rmscore" />
