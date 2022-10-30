@@ -63,7 +63,7 @@
 			>{left}iframe style="border: none; height: 200px;" seamless src="{url}/mod/aRooc1Sw"{right}{left}/iframe{right}</code
 		>
 	</p>
-	<iframe style="border: none; height: 200px;" seamless src="http://m:5173/mod/aRooc1Sw" />
+	<iframe style="border: none; height: 200px;" seamless src="{url}/mod/aRooc1Sw" />
 	<p>Again, to remove the scrollbars (again, deprecated) use this:</p>
 	<p>
 		<code
