@@ -61,8 +61,7 @@
 	<p>Using a project's id works in just the same way - see below</p>
 	<p>
 		<code
-			>{left}iframe style="border: none; height: 200px;" seamless src="{window.location
-				.protocol}//{window.location.host}/mod/aRooc1Sw"{right}{left}/iframe{right}</code
+			>{left}iframe style="border: none; height: 200px;" seamless src="{url}/mod/aRooc1Sw"{right}{left}/iframe{right}</code
 		>
 	</p>
 	<iframe style="border: none; height: 200px;" seamless src="http://m:5173/mod/aRooc1Sw" />
