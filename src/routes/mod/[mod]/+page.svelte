@@ -35,11 +35,11 @@
 		let resp2 = await fetch('https://api.modrinth.com/v2/project/' + modSlug + '/members');
 		let json2 = await resp2.json();
 		author = "";
-		json2.forEach(e => {
+		json2.forEach((e) => {
 			if (e == json2[json2.length]) {
 				author += e.user.username
 			} else {
-				author += e.user.username + ", "
+				author += e.user.username
 			}
 		});
 		summary = json.description;
@@ -49,12 +49,13 @@
 <div class="mainDiv">
 	<div class="mainDiv" style="display: flex;">
 		<img src={iconUrl} />
-		<p style="font-size:large;margin-right:15px;">{name}</p>
-		<div>
-			<p style="display: block;"><a style="font-weight: bold"> By </a>{author}</p>
+		<p style="font-size:large;margin:5px;font-weight:bold;">{name}</p>
+		<div style="margin-left:-7.65rem;">
+			<br/>
+			<p style="display:block;font-weight:50;">By {author}</p>
 		</div>
 	</div>
-	<p>{summary}</p>
+	<p style="margin-left:0.75rem;margin-right:0.75rem">{summary}</p>
 </div>
 
 <style>
@@ -70,7 +71,7 @@
 		color: white;
 	}
 	.mainDiv {
-		padding: 15px;
+		padding: 12px;
 		border-radius: 15px;
 		max-width: 36vw;
 		flex-grow: true;
@@ -81,7 +82,8 @@
 		background-color: #18191a;
 	}
 	.mainDiv > img {
-		margin-right: 12px;
+		margin-left: -0.5rem;
+		margin-right: 5px;
 		width: 64px;
 		border-radius: 15px;
 		height: 64px;
